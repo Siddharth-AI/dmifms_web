@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Corporate Offices",
+    "slug": "corporate-offices",
+    "icon": "building-2",
+    "description": "End-to-end facility management for corporate campuses, IT parks, and business offices.",
+    "image": "/images/industries/corporate.jpg",
+    "services": [
+      "Housekeeping",
+      "Front Office",
+      "Pantry Management",
+      "Security"
+    ],
+    "status": true,
+    "order": 1
+  },
+  {
+    "id": 2,
+    "name": "IT & ITES",
+    "slug": "it-ites",
+    "icon": "monitor",
+    "description": "Specialized FM solutions for technology companies, data centers, and software campuses.",
+    "image": "/images/industries/it.jpg",
+    "services": [
+      "Housekeeping",
+      "MEP Maintenance",
+      "Security",
+      "Cafeteria"
+    ],
+    "status": true,
+    "order": 2
+  },
+  {
+    "id": 3,
+    "name": "Banking, Finance & Insurance",
+    "slug": "banking-finance",
+    "icon": "landmark",
+    "description": "Compliant and secure facility services for banks, NBFCs, and insurance offices.",
+    "image": "/images/industries/banking.jpg",
+    "services": [
+      "Housekeeping",
+      "Security",
+      "Front Office",
+      "Payroll"
+    ],
+    "status": true,
+    "order": 3
+  },
+  {
+    "id": 4,
+    "name": "Pharma & Healthcare",
+    "slug": "pharma-healthcare",
+    "icon": "heart-pulse",
+    "description": "Hygiene-critical facility management for hospitals, clinics, and pharmaceutical plants.",
+    "image": "/images/industries/pharma.jpg",
+    "services": [
+      "Housekeeping",
+      "Waste Management",
+      "Pest Control",
+      "EHS"
+    ],
+    "status": true,
+    "order": 4
+  },
+  {
+    "id": 5,
+    "name": "Manufacturing",
+    "slug": "manufacturing",
+    "icon": "factory",
+    "description": "Industrial facility management and production support for manufacturing units.",
+    "image": "/images/industries/manufacturing.jpg",
+    "services": [
+      "Housekeeping",
+      "Production Support",
+      "Waste Management",
+      "Security"
+    ],
+    "status": true,
+    "order": 5
+  },
+  {
+    "id": 6,
+    "name": "Educational Institutes",
+    "slug": "educational-institutes",
+    "icon": "graduation-cap",
+    "description": "Safe, hygienic, and well-maintained facility services for schools, colleges, and universities.",
+    "image": "/images/industries/education.jpg",
+    "services": [
+      "Housekeeping",
+      "Horticulture",
+      "Security",
+      "Pest Control"
+    ],
+    "status": true,
+    "order": 6
+  },
+  {
+    "id": 7,
+    "name": "Hospitality & Aviation",
+    "slug": "hospitality-aviation",
+    "icon": "plane",
+    "description": "Premium hospitality-grade facility services for hotels, resorts, and airport facilities.",
+    "image": "/images/industries/hospitality.jpg",
+    "services": [
+      "Housekeeping",
+      "Guest House Mgmt",
+      "Front Office",
+      "Catering"
+    ],
+    "status": true,
+    "order": 7
+  },
+  {
+    "id": 8,
+    "name": "Malls & Food Courts",
+    "slug": "malls-food-courts",
+    "icon": "shopping-bag",
+    "description": "High-footfall facility management ensuring cleanliness, safety, and visitor satisfaction.",
+    "image": "/images/industries/malls.jpg",
+    "services": [
+      "Housekeeping",
+      "Security",
+      "Waste Management",
+      "Pest Control"
+    ],
+    "status": true,
+    "order": 8
+  },
+  {
+    "id": 9,
+    "name": "Telecom & Networking",
+    "slug": "telecom-networking",
+    "icon": "wifi",
+    "description": "Facility management for telecom offices, network hubs, and tower infrastructure.",
+    "image": "/images/industries/telecom.jpg",
+    "services": [
+      "Housekeeping",
+      "MEP Maintenance",
+      "Security",
+      "Staffing"
+    ],
+    "status": true,
+    "order": 9
+  },
+  {
+    "id": 10,
+    "name": "Government",
+    "slug": "government",
+    "icon": "landmark",
+    "description": "Reliable and compliant facility management services for government offices and institutions.",
+    "image": "/images/industries/government.jpg",
+    "services": [
+      "Housekeeping",
+      "Security",
+      "Office Assistance",
+      "Payroll"
+    ],
+    "status": true,
+    "order": 10
+  }
+]

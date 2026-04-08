@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "step": "01",
+    "title": "Pre-deployment",
+    "description": "Transition team deployed on-site 1 week prior to Go-Live for thorough site assessment and planning.",
+    "icon": "map-pin",
+    "color": "#1E3A8A",
+    "status": true
+  },
+  {
+    "id": 2,
+    "step": "02",
+    "title": "HR & BGV",
+    "description": "Background verification checks and joining formalities completed for all deployed personnel.",
+    "icon": "user-check",
+    "color": "#2563EB",
+    "status": true
+  },
+  {
+    "id": 3,
+    "step": "03",
+    "title": "Training",
+    "description": "Train-the-trainer program conducted with client and site-specific standards briefing for all staff.",
+    "icon": "graduation-cap",
+    "color": "#0EA5E9",
+    "status": true
+  },
+  {
+    "id": 4,
+    "step": "04",
+    "title": "Compliance",
+    "description": "Statutory documentation and allied services readiness ensured before deployment begins.",
+    "icon": "file-check",
+    "color": "#10B981",
+    "status": true
+  },
+  {
+    "id": 5,
+    "step": "05",
+    "title": "Processes",
+    "description": "SOPs, checklists, registers, and Statement of Work finalized and distributed to all team members.",
+    "icon": "clipboard-list",
+    "color": "#059669",
+    "status": true
+  },
+  {
+    "id": 6,
+    "step": "06",
+    "title": "Security",
+    "description": "Security policy briefing and access protocol setup completed for the site and all personnel.",
+    "icon": "shield-check",
+    "color": "#7C3AED",
+    "status": true
+  },
+  {
+    "id": 7,
+    "step": "07",
+    "title": "Reviews",
+    "description": "Progress reviews conducted with client stakeholders to align on readiness and address concerns.",
+    "icon": "users",
+    "color": "#D97706",
+    "status": true
+  },
+  {
+    "id": 8,
+    "step": "08",
+    "title": "Go-Live",
+    "description": "Formal handover to Operations team. Full service delivery commences as per agreed scope.",
+    "icon": "rocket",
+    "color": "#DC2626",
+    "status": true
+  },
+  {
+    "id": 9,
+    "step": "09",
+    "title": "Stabilization",
+    "description": "30–45 day post Go-Live monitoring, performance review, and sign-off for complete stabilization.",
+    "icon": "check-circle-2",
+    "color": "#16A34A",
+    "status": true
+  }
+]

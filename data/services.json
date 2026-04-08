@@ -1,0 +1,275 @@
+[
+  {
+    "id": "housekeeping",
+    "title": "Housekeeping",
+    "slug": "housekeeping",
+    "category": "facility",
+    "categoryLabel": "Facility Services",
+    "description": "Professional housekeeping and janitorial services maintaining the highest hygiene standards across corporate, industrial, and institutional spaces.",
+    "shortDescription": "Professional cleaning and janitorial services for spotless facilities.",
+    "icon": "sparkles",
+    "image": "/images/services/housekeeping.jpg",
+    "features": [
+      "Daily routine cleaning",
+      "Deep cleaning schedules",
+      "Sanitization protocols",
+      "Waste collection & disposal",
+      "Washroom hygiene management",
+      "SOP-driven operations"
+    ],
+    "status": true,
+    "order": 1
+  },
+  {
+    "id": "front-office",
+    "title": "Front Office / Help Desk",
+    "slug": "front-office",
+    "category": "facility",
+    "categoryLabel": "Facility Services",
+    "description": "Trained front office personnel delivering a professional first impression — reception management, visitor handling, and help desk support.",
+    "shortDescription": "Professional reception and help desk management services.",
+    "icon": "headset",
+    "image": "/images/services/front-office.jpg",
+    "features": [
+      "Visitor management",
+      "Reception handling",
+      "Help desk operations",
+      "Call management",
+      "Courier & mail handling",
+      "Trained & groomed staff"
+    ],
+    "status": true,
+    "order": 2
+  },
+  {
+    "id": "horticulture",
+    "title": "Horticulture",
+    "slug": "horticulture",
+    "category": "facility",
+    "categoryLabel": "Facility Services",
+    "description": "Expert gardening and landscape management services to maintain beautiful, green, and sustainable environments for your facilities.",
+    "shortDescription": "Gardening and landscape management for green spaces.",
+    "icon": "flower-2",
+    "image": "/images/services/horticulture.jpg",
+    "features": [
+      "Lawn maintenance",
+      "Plant care & watering",
+      "Seasonal planting",
+      "Landscape design",
+      "Irrigation management",
+      "Pest & disease control"
+    ],
+    "status": true,
+    "order": 3
+  },
+  {
+    "id": "waste-management",
+    "title": "Waste Management",
+    "slug": "waste-management",
+    "category": "facility",
+    "categoryLabel": "Facility Services",
+    "description": "Comprehensive waste management using source segregation, organic composting, and tech-driven SOPs to achieve sustainable outcomes.",
+    "shortDescription": "Sustainable waste segregation, composting, and disposal solutions.",
+    "icon": "recycle",
+    "image": "/images/services/waste-management.jpg",
+    "features": [
+      "Source segregation (wet/dry)",
+      "Organic composting",
+      "Authorized vendor transfer",
+      "EHS compliance",
+      "Standardized SOPs",
+      "MIS tracking"
+    ],
+    "status": true,
+    "order": 4
+  },
+  {
+    "id": "facade-cleaning",
+    "title": "Facade Cleaning",
+    "slug": "facade-cleaning",
+    "category": "facility",
+    "categoryLabel": "Facility Services",
+    "description": "Specialized external building facade cleaning using advanced equipment and techniques to maintain pristine building exteriors.",
+    "shortDescription": "External building cleaning with specialized equipment.",
+    "icon": "building-2",
+    "image": "/images/services/facade-cleaning.jpg",
+    "features": [
+      "Rope access cleaning",
+      "High-rise glass cleaning",
+      "Pressure washing",
+      "Cladding maintenance",
+      "Safety certified teams",
+      "Scheduled programs"
+    ],
+    "status": true,
+    "order": 5
+  },
+  {
+    "id": "pest-control",
+    "title": "Pest Control",
+    "slug": "pest-control",
+    "category": "facility",
+    "categoryLabel": "Facility Services",
+    "description": "Integrated pest management solutions using safe, approved chemicals and techniques to eliminate and prevent pest infestations.",
+    "shortDescription": "Integrated pest management with safe, approved methods.",
+    "icon": "bug",
+    "image": "/images/services/pest-control.jpg",
+    "features": [
+      "Rodent control",
+      "Cockroach treatment",
+      "Termite management",
+      "Mosquito fogging",
+      "Safe approved chemicals",
+      "Regular audits"
+    ],
+    "status": true,
+    "order": 6
+  },
+  {
+    "id": "guest-house-management",
+    "title": "Guest House Management",
+    "slug": "guest-house-management",
+    "category": "facility",
+    "categoryLabel": "Facility Services",
+    "description": "End-to-end guest house and accommodation management ensuring comfort, cleanliness, and hospitality for corporate guests.",
+    "shortDescription": "Complete guest house operations and hospitality management.",
+    "icon": "hotel",
+    "image": "/images/services/guest-house.jpg",
+    "features": [
+      "Room management",
+      "Housekeeping",
+      "Laundry services",
+      "Catering coordination",
+      "Booking management",
+      "Quality audits"
+    ],
+    "status": true,
+    "order": 7
+  },
+  {
+    "id": "pantry-management",
+    "title": "Pantry Management",
+    "slug": "pantry-management",
+    "category": "operational",
+    "categoryLabel": "Operational Services",
+    "description": "Professional pantry and cafeteria management ensuring hygienic food handling, timely service, and a comfortable break experience.",
+    "shortDescription": "Hygienic pantry and cafeteria operations management.",
+    "icon": "coffee",
+    "image": "/images/services/pantry.jpg",
+    "features": [
+      "Pantry boy services",
+      "Tea/coffee service",
+      "Stock management",
+      "Hygiene compliance",
+      "Cafeteria operations",
+      "Vendor coordination"
+    ],
+    "status": true,
+    "order": 8
+  },
+  {
+    "id": "office-assistance",
+    "title": "Office Assistance",
+    "slug": "office-assistance",
+    "category": "operational",
+    "categoryLabel": "Operational Services",
+    "description": "Trained office assistants handling administrative, logistics, and operational support tasks to keep your office running smoothly.",
+    "shortDescription": "Admin, logistics and operational support for smooth office functioning.",
+    "icon": "briefcase",
+    "image": "/images/services/office-assistance.jpg",
+    "features": [
+      "Document management",
+      "Internal dispatch",
+      "Logistics support",
+      "Mailroom operations",
+      "Stationery management",
+      "Admin outsourcing"
+    ],
+    "status": true,
+    "order": 9
+  },
+  {
+    "id": "mechanical-electrical",
+    "title": "Mechanical & Electrical Maintenance",
+    "slug": "mechanical-electrical",
+    "category": "operational",
+    "categoryLabel": "Operational Services",
+    "description": "Preventive and corrective maintenance of mechanical and electrical systems to ensure uninterrupted facility operations.",
+    "shortDescription": "Preventive and corrective MEP maintenance for facility uptime.",
+    "icon": "zap",
+    "image": "/images/services/mep.jpg",
+    "features": [
+      "Preventive maintenance",
+      "Corrective maintenance",
+      "HVAC servicing",
+      "Electrical systems",
+      "Plumbing",
+      "AMC management"
+    ],
+    "status": true,
+    "order": 10
+  },
+  {
+    "id": "payroll-management",
+    "title": "Payroll Management",
+    "slug": "payroll-management",
+    "category": "business",
+    "categoryLabel": "Business Services",
+    "description": "Accurate and compliant payroll processing with statutory deductions, benefit administration, and timely MIS reporting.",
+    "shortDescription": "Accurate payroll processing with statutory compliance.",
+    "icon": "wallet",
+    "image": "/images/services/payroll.jpg",
+    "features": [
+      "Payroll processing",
+      "Statutory deductions (PF/ESI)",
+      "Salary disbursement",
+      "Compliance filing",
+      "Employee self-service",
+      "MIS dashboards"
+    ],
+    "status": true,
+    "order": 11
+  },
+  {
+    "id": "contract-staffing",
+    "title": "Contract Staffing",
+    "slug": "contract-staffing",
+    "category": "business",
+    "categoryLabel": "Business Services",
+    "description": "End-to-end contract staffing — from recruitment to deployment, BGV, onboarding, and ongoing compliance management.",
+    "shortDescription": "End-to-end contract staffing and workforce deployment solutions.",
+    "icon": "users-round",
+    "image": "/images/services/staffing.jpg",
+    "features": [
+      "Skilled & unskilled staffing",
+      "Background verification",
+      "Onboarding & induction",
+      "Performance management",
+      "Statutory compliance",
+      "Replacement guarantee"
+    ],
+    "status": true,
+    "order": 12
+  },
+  {
+    "id": "security-services",
+    "title": "Security Services",
+    "slug": "security-services",
+    "category": "business",
+    "categoryLabel": "Business Services",
+    "description": "Trained security personnel for guarding, patrolling, and electronic surveillance to protect your facility and assets.",
+    "shortDescription": "Trained security guards, patrolling, and electronic surveillance.",
+    "icon": "shield",
+    "image": "/images/services/security.jpg",
+    "features": [
+      "Manned guarding",
+      "Patrolling",
+      "CCTV surveillance",
+      "Access control",
+      "Visitor management",
+      "Emergency response"
+    ],
+    "status": true,
+    "order": 13
+  }
+]

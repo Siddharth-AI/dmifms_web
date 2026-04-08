@@ -1,0 +1,17 @@
+{
+  "badge": "Production Support",
+  "title": "Nine Core Services Delivered with Safety & Efficiency",
+  "description": "Comprehensive production support services for manufacturing and industrial facilities — ensuring safety, efficiency, and consistent quality.",
+  "services": [
+    { "id": 1, "title": "Line Operations", "icon": "workflow", "status": true },
+    { "id": 2, "title": "Assembly Activities", "icon": "settings-2", "status": true },
+    { "id": 3, "title": "Material Handling", "icon": "forklift", "status": true },
+    { "id": 4, "title": "Data Entry Operations", "icon": "keyboard", "status": true },
+    { "id": 5, "title": "Welding & Painting", "icon": "flame", "status": true },
+    { "id": 6, "title": "Packaging / Loading / Unloading", "icon": "package", "status": true },
+    { "id": 7, "title": "Warehouse Management", "icon": "warehouse", "status": true },
+    { "id": 8, "title": "Inventory Management", "icon": "boxes", "status": true },
+    { "id": 9, "title": "Data Entry & MIS", "icon": "database", "status": true }
+  ],
+  "status": true
+}

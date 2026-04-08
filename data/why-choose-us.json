@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Process-driven SOPs",
+    "description": "Standardized methods and checks ensure consistency and quality across all sites.",
+    "icon": "clipboard-list"
+  },
+  {
+    "id": 2,
+    "title": "Skilled Workforce",
+    "description": "Trained teams with clear roles, KPIs, and safety practices for reliable delivery.",
+    "icon": "users"
+  },
+  {
+    "id": 3,
+    "title": "Integrated TFM",
+    "description": "End-to-end service integration for efficiency and total facility control.",
+    "icon": "layers"
+  },
+  {
+    "id": 4,
+    "title": "Compliance & EHS",
+    "description": "Strong focus on statutory compliance and environmental health & safety standards.",
+    "icon": "shield-check"
+  },
+  {
+    "id": 5,
+    "title": "Data & Reporting",
+    "description": "MIS and performance dashboards for complete transparency and accountability.",
+    "icon": "bar-chart-3"
+  }
+]

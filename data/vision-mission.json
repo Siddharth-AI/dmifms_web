@@ -1,0 +1,17 @@
+{
+  "vision": {
+    "title": "Our Vision",
+    "description": "To be India's most trusted partner for integrated facility solutions that enhance safety, efficiency, and user experience.",
+    "icon": "eye"
+  },
+  "mission": {
+    "title": "Our Mission",
+    "points": [
+      "Deliver consistent, high-quality services through trained people, robust processes, and smart technology.",
+      "Drive operational excellence, sustainability, and compliance across every client site.",
+      "Build long-term partnerships by being agile, transparent, and results-oriented."
+    ],
+    "icon": "target"
+  },
+  "status": true
+}
