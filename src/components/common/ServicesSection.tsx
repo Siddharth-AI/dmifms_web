@@ -2,12 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import {
-  ArrowRight,
-  ArrowUpRight,
-  ChevronRight,
-  CheckCircle2,
-} from "lucide-react";
+import { ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react";
 import ScrollReveal from "@/components/common/ScrollReveal";
 import { Service } from "@/types";
 
@@ -20,7 +15,6 @@ const categoryConfig = {
     bgImage:
       "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2670&auto=format&fit=crop",
     href: "/services?category=facility",
-    badge: "6 Services",
   },
   operational: {
     label: "Operational Services",
@@ -30,7 +24,6 @@ const categoryConfig = {
     bgImage:
       "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2569&auto=format&fit=crop",
     href: "/services?category=operational",
-    badge: "3 Services",
   },
   business: {
     label: "Business Services",
@@ -40,7 +33,6 @@ const categoryConfig = {
     bgImage:
       "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2670&auto=format&fit=crop",
     href: "/services?category=business",
-    badge: "3 Services",
   },
 } as const;
 
@@ -59,6 +51,11 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
     facility: active.filter((s) => s.category === "facility"),
     operational: active.filter((s) => s.category === "operational"),
     business: active.filter((s) => s.category === "business"),
+  };
+  const categoryCounts: Record<CategoryKey, string> = {
+    facility: `${byCategory.facility.length} Services`,
+    operational: `${byCategory.operational.length} Services`,
+    business: `${byCategory.business.length} Services`,
   };
 
   return (
@@ -127,7 +124,7 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
                         {/* Left: Text Content */}
                         <div className="lg:w-1/2 flex flex-col justify-center w-full z-10 h-full py-4 text-left">
                           <div className="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-slate-50 border border-slate-100 text-slate-600 text-[11px] font-bold uppercase tracking-widest mb-6 w-max shadow-sm">
-                            {config.badge}
+                            {categoryCounts[cat]}
                           </div>
 
                           <h3 className="text-3xl lg:text-[2.5rem] font-bold text-[#111] mb-4 tracking-tight leading-tight">

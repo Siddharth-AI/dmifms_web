@@ -11,6 +11,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import ScrollReveal from "@/components/common/ScrollReveal";
+import { getSiteContact } from "@/lib/site-config";
 
 const testimonials = [
   {
@@ -34,6 +35,8 @@ const testimonials = [
 ];
 
 export default function CTASection() {
+  const contact = getSiteContact();
+
   return (
     <section className="py-24 lg:py-32 relative overflow-hidden bg-[#F8F9FA]">
       {/* Premium Background Pattern */}
@@ -100,7 +103,7 @@ export default function CTASection() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <a
-                  href="tel:+910000000000"
+                  href={`tel:${contact.phone.replace(/\s+/g, "")}`}
                   className="inline-flex items-center justify-center gap-3 px-8 py-4  font-bold text-[15px] text-[#0A192F] bg-white border-2 border-gray-100 hover:border-[#EAB308] hover:bg-gray-50 transition-all duration-300 shadow-sm">
                   <Phone className="w-5 h-5" />
                   Call Us Now

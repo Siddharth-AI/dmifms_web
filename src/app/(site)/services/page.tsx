@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Sparkles,
@@ -66,6 +67,16 @@ export default function ServicesPage() {
   const pageData = servicesPageDataRaw as ServicesPageData;
   const [activeTab, setActiveTab] = useState("all");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const category = searchParams.get("category");
+    const validCategory = categories.some((cat) => cat.id === category)
+      ? category
+      : "all";
+
+    setActiveTab(validCategory);
+  }, [searchParams]);
 
   const filtered =
     activeTab === "all"
@@ -275,7 +286,7 @@ export default function ServicesPage() {
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.3 }}>
                     <Link
-                      href={`/services/${service.slug}`}
+                      href={`/services/${service.slug}?category=${service.category}`}
                       className="group block h-[400px] w-full overflow-hidden bg-[#0A192F] relative shadow-md hover:shadow-2xl transition-all duration-500">
                       {/* Full Background Image */}
                       {service.image ? (
@@ -283,6 +294,7 @@ export default function ServicesPage() {
                           src={service.image}
                           alt={service.title}
                           fill
+                          unoptimized={service.image.endsWith(".svg")}
                           className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110 opacity-60 group-hover:opacity-40"
                         />
                       ) : (

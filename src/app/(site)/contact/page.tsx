@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
+import { getSiteContact, getSocialLinks } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -24,6 +25,8 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   const data = readJSON<ContactData>("contact");
+  const contact = getSiteContact();
+  const social = getSocialLinks();
 
   return (
     <div className="bg-[#F8F9FA] min-h-screen">
@@ -104,7 +107,7 @@ export default function ContactPage() {
                 <div className="space-y-6 flex-grow">
                   {/* Phone */}
                   <a
-                    href={`tel:${data.phone}`}
+                    href={`tel:${contact.phone.replace(/\s+/g, "")}`}
                     className="group flex items-start gap-5 p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#EAB308]/50 transition-all duration-300">
                     <div className="w-12 h-12 rounded-xl bg-[#EAB308] flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform">
                       <Phone className="w-6 h-6 text-[#0A192F]" />
@@ -114,14 +117,14 @@ export default function ContactPage() {
                         Direct Line
                       </div>
                       <div className="text-lg text-white font-medium group-hover:text-[#EAB308] transition-colors">
-                        {data.phone}
+                        {contact.phone}
                       </div>
                     </div>
                   </a>
 
                   {/* Email */}
                   <a
-                    href={`mailto:${data.email}`}
+                    href={`mailto:${contact.email}`}
                     className="group flex items-start gap-5 p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[#EAB308]/50 transition-all duration-300">
                     <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0 border border-white/10 group-hover:bg-[#EAB308] transition-colors">
                       <Mail className="w-6 h-6 text-white group-hover:text-[#0A192F] transition-colors" />
@@ -131,7 +134,7 @@ export default function ContactPage() {
                         Email Support
                       </div>
                       <div className="text-sm text-white font-medium group-hover:text-[#EAB308] transition-colors break-all">
-                        {data.email}
+                        {contact.email}
                       </div>
                     </div>
                   </a>
@@ -158,13 +161,18 @@ export default function ContactPage() {
                     Connect with us
                   </div>
                   <div className="flex gap-3">
-                    {/* Add social icons here if needed, currently abstract circles */}
-                    <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/10 hover:bg-[#EAB308] hover:border-[#EAB308] cursor-pointer transition-colors group">
+                    <a
+                      href={social.linkedin}
+                      aria-label="LinkedIn"
+                      className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/10 hover:bg-[#EAB308] hover:border-[#EAB308] cursor-pointer transition-colors group">
                       <Globe2 className="w-4 h-4 text-white group-hover:text-[#0A192F]" />
-                    </div>
-                    <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/10 hover:bg-[#EAB308] hover:border-[#EAB308] cursor-pointer transition-colors group">
+                    </a>
+                    <a
+                      href={social.x}
+                      aria-label="X"
+                      className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/10 hover:bg-[#EAB308] hover:border-[#EAB308] cursor-pointer transition-colors group">
                       <Building2 className="w-4 h-4 text-white group-hover:text-[#0A192F]" />
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
