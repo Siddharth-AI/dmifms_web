@@ -268,6 +268,54 @@ export default function AdminContactPage() {
             onChange={(e) => setData({ ...data, phone: e.target.value })}
           />
         </div>
+
+        <div className="pt-2 border-t border-slate-100 space-y-4">
+          <h3 className="font-bold text-[#0F172A] text-sm uppercase tracking-wide">
+            Social Links
+          </h3>
+          <div>
+            {lbl("LinkedIn URL")}
+            <input
+              className={inp}
+              value={data.social?.linkedin || ""}
+              onChange={(e) =>
+                setData({
+                  ...data,
+                  social: { ...data.social, linkedin: e.target.value },
+                })
+              }
+              placeholder="https://linkedin.com/company/..."
+            />
+          </div>
+          <div>
+            {lbl("X URL")}
+            <input
+              className={inp}
+              value={data.social?.twitter || ""}
+              onChange={(e) =>
+                setData({
+                  ...data,
+                  social: { ...data.social, twitter: e.target.value },
+                })
+              }
+              placeholder="https://x.com/..."
+            />
+          </div>
+          <div>
+            {lbl("Facebook URL")}
+            <input
+              className={inp}
+              value={data.social?.facebook || ""}
+              onChange={(e) =>
+                setData({
+                  ...data,
+                  social: { ...data.social, facebook: e.target.value },
+                })
+              }
+              placeholder="https://facebook.com/..."
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

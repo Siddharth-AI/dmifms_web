@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { readJSON } from "@/lib/jsonCMS";
 import {
   MapPin,
   Mail,
@@ -8,7 +9,7 @@ import {
   ShieldCheck,
   BadgeCheck,
 } from "lucide-react";
-import { getSiteContact, getSocialLinks } from "@/lib/site-config";
+import { ContactData } from "@/types";
 
 const footerLinks = {
   company: [
@@ -51,17 +52,17 @@ const FacebookIcon = () => (
   </svg>
 );
 
+const contact = readJSON<ContactData>("contact");
+
 const socialLinks = () => {
-  const social = getSocialLinks();
+  const social = contact.social;
 
   return [
-    { Icon: LinkedinIcon, href: social.linkedin, label: "LinkedIn" },
-    { Icon: XIcon, href: social.x, label: "X" },
-    { Icon: FacebookIcon, href: social.facebook, label: "Facebook" },
+    { Icon: LinkedinIcon, href: social.linkedin || "#", label: "LinkedIn" },
+    { Icon: XIcon, href: social.twitter || "#", label: "X" },
+    { Icon: FacebookIcon, href: social.facebook || "#", label: "Facebook" },
   ];
 };
-
-const contact = getSiteContact();
 
 export default function Footer() {
   return (
@@ -96,13 +97,15 @@ export default function Footer() {
             {/* Social Links - Apple Style */}
             <div className="flex items-center gap-3">
               {socialLinks().map(({ Icon, href, label }) => (
-                <a
+                <Link
                   key={label}
                   href={href}
                   aria-label={label}
+                  target="_blank"
+                  rel="noreferrer noopener"
                   className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-[#111] hover:bg-[#FFD700] hover:border-[#FFD700] transition-all duration-300">
                   <Icon />
-                </a>
+                </Link>
               ))}
             </div>
           </div>

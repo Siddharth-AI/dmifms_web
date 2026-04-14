@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import {
   ArrowRight,
   Phone,
@@ -11,7 +11,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import ScrollReveal from "@/components/common/ScrollReveal";
-import { getSiteContact } from "@/lib/site-config";
+import { ContactData } from "@/types";
 
 const testimonials = [
   {
@@ -35,7 +35,14 @@ const testimonials = [
 ];
 
 export default function CTASection() {
-  const contact = getSiteContact();
+  const [contact, setContact] = useState<ContactData | null>(null);
+
+  useEffect(() => {
+    fetch("/api/content/contact")
+      .then((res) => res.json())
+      .then((json) => setContact(json))
+      .catch(() => setContact(null));
+  }, []);
 
   return (
     <section className="py-24 lg:py-32 relative overflow-hidden bg-[#F8F9FA]">
@@ -103,7 +110,11 @@ export default function CTASection() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <a
-                  href={`tel:${contact.phone.replace(/\s+/g, "")}`}
+                  href={
+                    contact?.phone
+                      ? `tel:${contact.phone.replace(/\s+/g, "")}`
+                      : "/contact"
+                  }
                   className="inline-flex items-center justify-center gap-3 px-8 py-4  font-bold text-[15px] text-[#0A192F] bg-white border-2 border-gray-100 hover:border-[#EAB308] hover:bg-gray-50 transition-all duration-300 shadow-sm">
                   <Phone className="w-5 h-5" />
                   Call Us Now

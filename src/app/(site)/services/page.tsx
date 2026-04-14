@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Sparkles,
@@ -67,16 +66,17 @@ export default function ServicesPage() {
   const pageData = servicesPageDataRaw as ServicesPageData;
   const [activeTab, setActiveTab] = useState("all");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const searchParams = useSearchParams();
 
   useEffect(() => {
-    const category = searchParams.get("category");
+    const category = new URLSearchParams(window.location.search).get(
+      "category",
+    );
     const validCategory = categories.some((cat) => cat.id === category)
       ? category
       : "all";
 
-    setActiveTab(validCategory);
-  }, [searchParams]);
+    setActiveTab(validCategory ?? "all");
+  }, []);
 
   const filtered =
     activeTab === "all"

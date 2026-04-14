@@ -15,8 +15,7 @@ import {
   Mail,
 } from "lucide-react";
 import { readJSON } from "@/lib/jsonCMS";
-import { getSiteContact } from "@/lib/site-config";
-import { Service } from "@/types";
+import { ContactData, Service } from "@/types";
 import { Metadata } from "next";
 
 interface Props {
@@ -77,7 +76,7 @@ export default async function ServiceDetailPage({
 
   const meta = categoryMeta[service.category] ?? categoryMeta.facility;
   const CatIcon = meta.icon;
-  const contact = getSiteContact();
+  const contact = readJSON<ContactData>("contact");
   const related = services
     .filter(
       (s) => s.category === service.category && s.id !== service.id && s.status,
