@@ -53,27 +53,27 @@ const FacebookIcon = () => (
   </svg>
 );
 
-const contact = readJSON<ContactData>("contact");
-
-const socialLinks = () => {
-  const social = contact.social;
-
-  return [
-    {
-      Icon: LinkedinIcon,
-      href: ensureAbsoluteUrl(social.linkedin),
-      label: "LinkedIn",
-    },
-    { Icon: XIcon, href: ensureAbsoluteUrl(social.twitter), label: "X" },
-    {
-      Icon: FacebookIcon,
-      href: ensureAbsoluteUrl(social.facebook),
-      label: "Facebook",
-    },
-  ];
-};
-
 export default function Footer() {
+  const contact = readJSON<ContactData>("contact");
+
+  const socialLinks = () => {
+    const social = contact.social;
+
+    return [
+      {
+        Icon: LinkedinIcon,
+        href: ensureAbsoluteUrl(social.linkedin),
+        label: "LinkedIn",
+      },
+      { Icon: XIcon, href: ensureAbsoluteUrl(social.twitter), label: "X" },
+      {
+        Icon: FacebookIcon,
+        href: ensureAbsoluteUrl(social.facebook),
+        label: "Facebook",
+      },
+    ];
+  };
+
   return (
     <footer className="bg-[#0A0A0A] text-white pt-20 pb-10 relative overflow-hidden">
       {/* Subtle Background Glow */}
