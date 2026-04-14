@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { readJSON } from "@/lib/jsonCMS";
 import { ensureAbsoluteUrl } from "@/lib/utils";
 import { ContactData } from "@/types";
@@ -7,16 +6,27 @@ import {
   MapPin,
   Mail,
   Phone,
-  ArrowRight,
   MessageSquare,
-  Globe2,
-  Building2,
   Clock,
   Users,
   Award,
 } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
+
+const LinkedinIcon = ({ className = "" }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect x="2" y="9" width="4" height="12" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
+
+const XIcon = ({ className = "" }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor">
+    <path d="M4 4h3.6l5.1 6.8L18.8 4H22l-7.6 8.4L22.5 20H18.9l-5.6-7.4L7.2 20H4l8.1-8.9L4 4z" />
+  </svg>
+);
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -26,6 +36,32 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   const data = readJSON<ContactData>("contact");
+  const quickLinks = [
+    {
+      label: "LinkedIn",
+      href: ensureAbsoluteUrl(data.social.linkedin),
+      icon: LinkedinIcon,
+      external: true,
+    },
+    {
+      label: "X",
+      href: ensureAbsoluteUrl(data.social.twitter),
+      icon: XIcon,
+      external: true,
+    },
+    {
+      label: "Email",
+      href: `mailto:${data.email}`,
+      icon: Mail,
+      external: false,
+    },
+    {
+      label: "Mobile",
+      href: `tel:${data.phone.replace(/\s+/g, "")}`,
+      icon: Phone,
+      external: false,
+    },
+  ];
 
   return (
     <div className="bg-[#F8F9FA] min-h-screen">
@@ -160,22 +196,20 @@ export default function ContactPage() {
                     Connect with us
                   </div>
                   <div className="flex gap-3">
-                    <Link
-                      href={ensureAbsoluteUrl(data.social.linkedin)}
-                      aria-label="LinkedIn"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/10 hover:bg-[#EAB308] hover:border-[#EAB308] cursor-pointer transition-colors group">
-                      <Globe2 className="w-4 h-4 text-white group-hover:text-[#0A192F]" />
-                    </Link>
-                    <Link
-                      href={ensureAbsoluteUrl(data.social.twitter)}
-                      aria-label="X"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/10 hover:bg-[#EAB308] hover:border-[#EAB308] cursor-pointer transition-colors group">
-                      <Building2 className="w-4 h-4 text-white group-hover:text-[#0A192F]" />
-                    </Link>
+                    {quickLinks.map(({ label, href, icon: Icon, external }) => (
+                      <a
+                        key={label}
+                        href={href}
+                        aria-label={label}
+                        target={external ? "_blank" : undefined}
+                        rel={external ? "noreferrer noopener" : undefined}
+                        className="relative w-8 h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/10 hover:bg-[#EAB308] hover:border-[#EAB308] cursor-pointer transition-colors group">
+                        <Icon className="w-4 h-4 text-white group-hover:text-[#0A192F] transition-colors" />
+                        <span className="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-white text-[#0A192F] text-[10px] font-bold px-2 py-1 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200">
+                          {label}
+                        </span>
+                      </a>
+                    ))}
                   </div>
                 </div>
               </div>
