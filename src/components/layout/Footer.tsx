@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { readJSON } from "@/lib/jsonCMS";
+import { ensureAbsoluteUrl } from "@/lib/utils";
 import {
   MapPin,
   Mail,
@@ -58,9 +59,17 @@ const socialLinks = () => {
   const social = contact.social;
 
   return [
-    { Icon: LinkedinIcon, href: social.linkedin || "#", label: "LinkedIn" },
-    { Icon: XIcon, href: social.twitter || "#", label: "X" },
-    { Icon: FacebookIcon, href: social.facebook || "#", label: "Facebook" },
+    {
+      Icon: LinkedinIcon,
+      href: ensureAbsoluteUrl(social.linkedin),
+      label: "LinkedIn",
+    },
+    { Icon: XIcon, href: ensureAbsoluteUrl(social.twitter), label: "X" },
+    {
+      Icon: FacebookIcon,
+      href: ensureAbsoluteUrl(social.facebook),
+      label: "Facebook",
+    },
   ];
 };
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { readJSON } from "@/lib/jsonCMS";
+import { ensureAbsoluteUrl } from "@/lib/utils";
 import { ContactData } from "@/types";
 import ContactForm from "@/components/sections/ContactForm";
 import {
@@ -160,7 +161,7 @@ export default function ContactPage() {
                   </div>
                   <div className="flex gap-3">
                     <Link
-                      href={data.social.linkedin || "#"}
+                      href={ensureAbsoluteUrl(data.social.linkedin)}
                       aria-label="LinkedIn"
                       target="_blank"
                       rel="noreferrer noopener"
@@ -168,7 +169,7 @@ export default function ContactPage() {
                       <Globe2 className="w-4 h-4 text-white group-hover:text-[#0A192F]" />
                     </Link>
                     <Link
-                      href={data.social.twitter || "#"}
+                      href={ensureAbsoluteUrl(data.social.twitter)}
                       aria-label="X"
                       target="_blank"
                       rel="noreferrer noopener"
